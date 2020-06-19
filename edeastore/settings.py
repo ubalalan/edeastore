@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
    
     'product.apps.ProductConfig',
+    'analysis.apps.AnalysisConfig',
     'accounting.apps.AccountingConfig',
     'store.apps.StoreConfig',
     'ship.apps.ShipConfig',

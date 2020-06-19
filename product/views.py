@@ -5,11 +5,17 @@ from .forms import ListForm
 
 # Create your views here.
 
+def dashboard(request):
+    context = {}
+    return render(request, 'dashboard.html', context)  
+
 
 def product(request):
     Products = Product.objects.all()
     context = {'Products': Products}
     return render(request, 'product.html', context)
+
+  
 
 
 def addproduct(request):

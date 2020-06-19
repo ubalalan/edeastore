@@ -5,4 +5,4 @@ from .models import Vendor
 
 def vendor(request):
     context = {}
-    return render(request, 'ship.html', context)
+    return render(request, 'vendor.html', context)

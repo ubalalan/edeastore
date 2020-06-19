@@ -1,6 +1,13 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="#">Products</a></li>
+  </ol>
+</nav>
 <div class="position-relative overflow-hidden p-3 m-md-3 text-center bg-light">
     <div
         class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -11,7 +18,8 @@
             <div class="btn-group mr-2">
                 <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                <button type="button" class="btn btn-sm btn-outline-primary">Add New Product</button>
+                <button type="button" class="btn btn-sm btn-outline-primary" href="{% url 'addproduct' %}"> Add New
+                    Product</button>
             </div>
             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
                 <span data-feather="calendar"></span>
@@ -21,10 +29,10 @@
     </div>
 
 
-    <table class="table table-bordered">
-        <thead>
+    <table class="table table-sm">
+        <thead class="thead-dark">
             <tr>
-                <th scope="col">No</th>
+              
                 <th scope="col">Product Name</th>
                 <th scope="col">Decription</th>
                 <th scope="col">Date</th>
@@ -46,6 +54,20 @@
             {% endfor %}
         </tbody>
     </table>
+    <hr>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
 </div>
 
 {% endblock content %}
